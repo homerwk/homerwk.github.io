@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="S6ADC通用天赋加点图攻略，提供最新S6赛季射手通用天赋符文搭配方案、出装推荐及实战技巧，助你上分。">
+    <meta name="keywords" content="S6ADC通用天赋加点图,英雄联盟S6天赋,ADC符文搭配,英雄联盟攻略">
+    <title>S6ADC通用天赋加点图-英雄联盟S6赛季射手符文攻略与出装指南</title>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #c89b3c;
+            --bg-color: #f4f4f4;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-radius: 8px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 1rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--accent-color);
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            color: #ddd;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #000000 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            color: #ccc;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            background-color: var(--accent-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: bold;
+            transition: background-color 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #a67c2b;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            padding: 40px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.8rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 10px auto 0;
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
+            align-items: start;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #ddd;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-text {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: 4px 8px;
+            background-color: #eee;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            color: #555;
+            margin-right: 5px;
+        }
+
+        /* Feature List */
+        .feature-list {
+            list-style: none;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+        }
+
+        .feature-icon {
+            width: 40px;
+            height: 40px;
+            background-color: rgba(200, 155, 60, 0.1);
+            color: var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            flex-shrink: 0;
+            font-weight: bold;
+        }
+
+        /* Comparison Table */
+        .comparison-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--card-bg);
+            box-shadow: var(--shadow);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+        }
+
+        .comparison-table th, .comparison-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .comparison-table th {
+            background-color: #f9f9f9;
+            color: var(--text-main);
+            font-weight: 600;
+        }
+
+        .comparison-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* FAQ Section */
+        .faq-item {
+            background: var(--card-bg);
+            margin-bottom: 15px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            font-size: 1.1rem;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #888;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 0.9rem;
+            margin-top: 60px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+            .grid-2 {
+                grid-template-columns: 1fr;
+            }
+            nav ul {
+                display: none; /* Simplified for mobile demo */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <div class="logo">LOL<span>攻略网</span></div>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">天赋符文</a></li>
+                <li><a href="#">出装推荐</a></li>
+                <li><a href="#">视频教学</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>S6ADC通用天赋加点图</h1>
+        <p>英雄联盟S6赛季射手（ADC）通用天赋符文搭配方案，解析最佳点法与出装思路，助你主宰下路。</p>
+        <a href="#guide" class="btn">查看详细攻略</a>
+    </div>
+</section>
+
+<main class="container">
+    
+    <!-- 核心天赋图示区 -->
+    <section id="guide" style="margin-bottom: 60px;">
+        <h2 class="section-title">S6赛季射手通用天赋推荐</h2>
+        <div class="grid-2">
+            <article class="card">
+                <img src="https://picsum.photos/seed/s6rune1/400/250" alt="S6天赋符文示意图" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">凶猛系 - 致命节奏</h3>
+                    <p class="card-text">S6赛季最主流的ADC天赋选择。通过连续攻击叠加攻击速度，极大提升后期持续输出能力，是推线和团战的核心。</p>
+                    <div style="margin-top:15px;">
+                        <span class="tag">推荐指数</span>
+                        <span class="tag">高爆发</span>
+                        <span class="tag">持续输出</span>
+                    </div>
+                </div>
+            </article>
+            
+            <article class="card">
+                <img src="https://picsum.photos/seed/s6rune2/400/250" alt="S6符文系统示意图" class="card-img">
+                <div class="card-body">
+                    <h3 class="card-title">坚决系 - 吸血习性</h3>
+                    <p class="card-text">针对对线期脆弱设计的防御天赋。提供额外的生命偷取和攻击力，增强赖线能力，减少对回复装备的依赖。</p>
+                    <div style="margin-top:15px;">
+                        <span class="tag">续航能力</span>
+                        <span class="tag">生存能力</span>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- 详细解析 -->
+    <section style="margin-bottom: 60px;">
+        <h2 class="section-title">天赋加点详细解析</h2>
+        <div class="grid-3">
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">1. 精选天赋点法</h3>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">1</div>
+                            <div>
+                                <strong>雷霆领主</strong>
+                                <p style="font-size:0.9rem; color:#666;">适合高爆发ADC（如伊泽瑞尔、薇恩）。触发后提供爆发伤害，适合秒杀脆皮。</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">2</div>
+                            <div>
+                                <strong>战争领主</strong>
+                                <p style="font-size:0.9rem; color:#666;">适合持续作战型ADC（如德莱文、大嘴）。配合W技能或大招，提升团战贡献度。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">2. 符文搭配建议</h3>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">3</div>
+                            <div>
+                                <strong>红色</strong>
+                                <p style="font-size:0.9rem; color:#666;">攻击速度X9。提升基础攻速，配合天赋更易触发效果。</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">4</div>
+                            <div>
+                                <strong>黄色</strong>
+                                <p style="font-size:0.9rem; color:#666;">固定护甲X9。标准下路ADC配置，减少对拼时的受伤。</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">5</div>
+                            <div>
+                                <strong>蓝色</strong>
+                                <p style="font-size:0.9rem; color:#666;">固定魔抗X9。保证面对法师辅助时的生存能力。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-body">
+                    <h3 class="card-title">3. 副系天赋选择</h3>
+                    <ul class="feature-list">
+                        <li class="feature-item">
+                            <div class="feature-icon">6</div>
+                            <div>
+                                <strong>凶猛系副系</strong>
+                                <p style="font-size:0.9rem; color:#666;">选择“野蛮”和“巨兽”。提升攻击力和护甲穿透，适合前期对线压制。</p>
+                            </div>
+                        </li>
+                        <li class="feature-item">
+                            <div class="feature-icon">7</div>
+                            <div>
+                                <strong>坚决系副系</strong>
+                                <p style="font-size:0.9rem; color:#666;">选择“复苏之风”和“过度生长”。增强对线续航和后期坦度。</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 对比表格 -->
+    <section style="margin-bottom: 60px;">
+        <h2 class="section-title">主流ADC天赋对比</h2>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>英雄类型</th>
+                    <th>首选天赋</th>
+                    <th>符文重点</th>
+                    <th>适用场景</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>刺客型ADC</td>
+                    <td>雷霆领主</td>
+                    <td>攻击速度、法术穿透</td>
+                    <td>团战切入、秒杀脆皮</td>
+                </tr>
+                <tr>
+                    <td>持续输出型</td>
+                    <td>战争领主</td>
+                    <td>生命偷取、攻击速度</td>
+                    <td>站撸、推线、持续团战</td>
+                </tr>
+                <tr>
+                    <td>稳健发育型</td>
+                    <td>吸血习性</td>
+                    <td>固定攻击力、生命偷取</td>
+                    <td>对线期消耗、赖线</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <!-- 常见问题 -->
+    <section style="margin-bottom: 60px;">
+        <h2 class="section-title">常见问题 (FAQ)</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">
+                S6ADC通用天赋图哪里看？
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                请参考本文“天赋加点详细解析”部分，我们提供了具体的点法步骤和图标说明。同时，您可以在游戏中天赋页面直接选择“凶猛”和“坚决”系进行配置。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                为什么推荐带“战争领主”而不是“雷霆”？
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                “战争领主”提供的攻击力加成和生命偷取在游戏前期对线期更有优势，配合ADC的技能机制可以打出更高的伤害。而“雷霆”更适合后期装备成型后的爆发秒杀，需根据对局情况切换。
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">
+                符文颜色有什么讲究？
+                <span class="faq-icon">▼</span>
+            </div>
+            <div class="faq-answer">
+                红色通常选择攻击速度或攻击力，黄色选择护甲，蓝色选择魔抗，这是S6赛季的固定搭配，能最大化基础属性收益。
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023-2024 英雄联盟攻略网. All Rights Reserved.</p>
+        <p>本页面仅供学习交流使用，英雄联盟商标归Riot Games所有。</p>
+    </div>
+</footer>
+
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</body>
+</html>
