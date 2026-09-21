@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>恶有恶报 - 真实因果故事与警示录</title>
+    <meta name="description" content="恶有恶报收录了古今中外关于因果报应、善恶有报的真实案例与深度解析，旨在通过警示故事弘扬正能量，探讨人性与道德的边界。">
+    <meta name="keywords" content="恶有恶报,因果报应,警示故事,人性,道德,民间传说,真实案例">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000;
+            --primary-hover: #A52A2A;
+            --bg-color: #f9f7f2;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e0e0e0;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --spacing-unit: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            letter-spacing: -0.5px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 400;
+            margin-left: 4px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 32px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: var(--text-main);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c0b0b 0%, #4a0e0e 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 24px;
+            font-weight: 800;
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 14px 36px;
+            border-radius: 30px;
+            font-size: 18px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-2px);
+        }
+
+        /* Main Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px var(--spacing-unit);
+        }
+
+        .grid-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+        }
+
+        /* Content Area */
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 24px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: normal;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .article-card:hover {
+            transform: translateY(-4px);
+        }
+
+        .article-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .article-body {
+            padding: 24px;
+        }
+
+        .article-meta {
+            font-size: 13px;
+            color: #999;
+            margin-bottom: 12px;
+            display: flex;
+            gap: 16px;
+        }
+
+        .article-title {
+            font-size: 22px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .article-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .article-excerpt {
+            color: var(--text-secondary);
+            font-size: 15px;
+            margin-bottom: 20px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            font-size: 15px;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 24px;
+            border-radius: 8px;
+            box-shadow: var(--shadow);
+        }
+
+        .widget-title {
+            font-size: 18px;
+            margin-bottom: 16px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            font-weight: 700;
+        }
+
+        .ranking-list li {
+            padding: 12px 0;
+            border-bottom: 1px dashed var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .ranking-list li:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-right: 10px;
+            width: 20px;
+        }
+
+        .rank-title {
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .quote-box {
+            background-color: #fff8f8;
+            border-left: 4px solid var(--primary-color);
+            padding: 16px;
+            margin-top: 10px;
+            font-style: italic;
+            color: #555;
+            font-size: 14px;
+        }
+
+        /* Features Section */
+        .features {
+            background-color: white;
+            padding: 60px 0;
+            border-top: 1px solid var(--border-color);
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 20px;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .feature-title {
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .feature-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1a1a1a;
+            color: #ccc;
+            padding: 60px 0 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .footer-bottom {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px var(--spacing-unit);
+            text-align: center;
+            border-top: 1px solid #333;
+            font-size: 13px;
+            color: #777;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-container {
+                padding: 0 16px;
+            }
+            
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .grid-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <a href="#" class="logo">
+                恶有恶报
+                <span>警示录</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">历史故事</a></li>
+                    <li><a href="#">现代案例</a></li>
+                    <li><a href="#">因果解析</a></li>
+                    <li><a href="#">关于我们</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn" aria-label="搜索">🔍</button>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>善恶终有报，天道好轮回</h1>
+            <p>收录古今中外真实因果故事，以史为鉴，警钟长鸣，探讨人性深处的道德律令。</p>
+            <a href="#latest" class="cta-button">阅读最新故事</a>
+        </div>
+    </section>
+
+    <main class="container" id="latest">
+        <div class="grid-layout">
+            <!-- Left Content -->
+            <div class="content-area">
+                <div class="section-title">
+                    <h2>最新警示故事</h2>
+                    <a href="#">查看更多 &rarr;</a>
+                </div>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/evil1/800/400" alt="古代刑罚与警示" class="article-image">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>历史传说</span>
+                            <span>•</span>
+                            <span>2023-10-24</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">古代贪官的最终下场：从权倾朝野到身首异处</a></h3>
+                        <p class="article-excerpt">
+                            历史上许多贪官在位时极尽奢靡，欺压百姓。本文通过几个典型的历史案例，详细剖析了贪欲如何一步步将他们推向深渊，最终难逃国法与天道的制裁。
+                        </p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/evil2/800/400" alt="现代道德案例" class="article-image">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>社会纪实</span>
+                            <span>•</span>
+                            <span>2023-10-22</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">漠视生命的代价：一起车祸背后的因果反思</a></h3>
+                        <p class="article-excerpt">
+                            在繁忙的都市中，一次看似偶然的违章驾驶，却引发了一场无法挽回的悲剧。本文还原了事故经过，并探讨了缺乏敬畏之心对个人及家庭造成的深远影响。
+                        </p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/evil3/800/400" alt="商道与诚信" class="article-image">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>商业伦理</span>
+                            <span>•</span>
+                            <span>2023-10-18</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">商业欺诈的崩塌：诚信缺失导致的连锁反应</a></h3>
+                        <p class="article-excerpt">
+                            一些企业为了短期利益，不惜造假欺诈。这种短视行为虽然可能在短期内获利，但最终会导致信誉破产、市场淘汰，甚至面临法律制裁。
+                        </p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+
+                <div class="section-title" style="margin-top: 40px;">
+                    <h2>深度解析</h2>
+                </div>
+                
+                <article class="article-card">
+                    <div class="article-body">
+                        <div class="article-meta">
+                            <span>哲学探讨</span>
+                        </div>
+                        <h3 class="article-title"><a href="#">何为“因果”？从心理学角度解读善恶报应</a></h3>
+                        <p class="article-excerpt">
+                            “恶有恶报”不仅仅是宗教或迷信的说法，在心理学和社会学层面也有其解释。我们的行为模式会塑造我们的环境，进而影响我们的命运。
+                        </p>
+                        <a href="#" class="read-more">阅读全文 &rarr;</a>
+                    </div>
+                </article>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside>
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门榜 TOP 5</h3>
+                    <ul class="ranking-list">
+                        <li>
+                            <span class="rank-num">1</span>
+                            <a href="#" class="rank-title">杀生果报：农夫与蛇的现代版</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">2</span>
+                            <a href="#" class="rank-title">因小失大：一次违章驾驶的代价</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">3</span>
+                            <a href="#" class="rank-title">职场算计：最终害人害己</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <a href="#" class="rank-title">贪婪的深渊：潘多拉魔盒的启示</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <a href="#" class="rank-title">积德行善的隐形回报</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">经典语录</h3>
+                    <div class="quote-box">
+                        “勿以恶小而为之，勿以善小而不为。惟贤惟德，能服于人。”
+                    </div>
+                    <div style="margin-top: 10px; font-size: 12px; color: #999; text-align: right;">—— 《三国志》</div>
+                </div>
+
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">相关专题</h3>
+                    <ul class="ranking-list" style="border: none;">
+                        <li><a href="#">历史典故</a></li>
+                        <li><a href="#">民俗传说</a></li>
+                        <li><a href="#">警示教育</a></li>
+                        <li><a href="#">道德修养</a></li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <section class="features">
+        <div class="features-grid">
+            <div class="feature-item">
+                <span class="feature-icon">📜</span>
+                <h4 class="feature-title">历史典故</h4>
+                <p class="feature-desc">挖掘古籍中的智慧，用真实历史故事警醒世人。</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">👁️</span>
+                <h4 class="feature-title">真实案例</h4>
+                <p class="feature-desc">记录当代发生的真实事件，还原因果逻辑。</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">⚖️</span>
+                <h4 class="feature-title">因果解析</h4>
+                <p class="feature-desc">从不同角度剖析善恶行为带来的后果。</p>
+            </div>
+            <div class="feature-item">
+                <span class="feature-icon">🌱</span>
+                <h4 class="feature-title">修身养性</h4>
+                <p class="feature-desc">倡导积德行善，培养良好的道德品质。</p>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>恶有恶报</h4>
+                <p style="font-size: 14px; line-height: 1.8;">
+                    致力于传播正能量，通过讲述警示故事，帮助读者明辨是非，建立正确的价值观。愿每一个读者都能心存善念，敬畏因果。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">历史故事</a></li>
+                    <li><a href="#">现代案例</a></li>
+                    <li><a href="#">警示录大全</a></li>
+                    <li><a href="#">投稿建议</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>栏目分类</h4>
+                <ul>
+                    <li><a href="#">民间传说</a></li>
+                    <li><a href="#">商业伦理</a></li>
+                    <li><a href="#">家庭教育</a></li>
+                    <li><a href="#">社会观察</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>邮箱：contact@ewybo.com</li>
+                    <li>微信：ewybo_official</li>
+                    <li>声明：本站内容仅供学习交流，不代表本站立场。</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 恶有恶报警示录. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
