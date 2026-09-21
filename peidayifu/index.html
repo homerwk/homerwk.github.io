@@ -1,0 +1,684 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="配搭衣服 - 专业服装搭配指南。提供时尚穿搭技巧、色彩搭配原理、风格定位建议及实用衣橱管理方法，助你轻松提升衣品与个人形象。">
+    <meta name="keywords" content="配搭衣服, 服装搭配, 穿搭技巧, 色彩搭配, 风格指南, 时尚穿搭">
+    <title>配搭衣服 - 时尚穿搭技巧与色彩搭配指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #e67e22;
+            --bg-color: #f9f9f9;
+            --card-bg: #ffffff;
+            --text-color: #333333;
+            --text-light: #666666;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: 1px solid #ddd;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 0.9rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fdfbfb 0%, #ebedee 100%);
+            padding: 4rem 1rem;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 2rem;
+        }
+
+        .hero-tags {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background-color: #fff;
+            padding: 0.5rem 1.2rem;
+            border-radius: 20px;
+            border: 1px solid #eee;
+            font-size: 0.9rem;
+            color: var(--text-light);
+            transition: all 0.3s;
+        }
+
+        .tag:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* Main Content */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem 1rem;
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        /* Content Sections */
+        section {
+            margin-bottom: 3rem;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            border-bottom: 2px solid #f0f0f0;
+            padding-bottom: 0.5rem;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -0.6rem;
+            left: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-color);
+        }
+
+        /* Color Wheel */
+        .color-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 1rem;
+        }
+
+        .color-card {
+            background: white;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.2s;
+        }
+
+        .color-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .color-circle {
+            width: 100%;
+            height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 0.9rem;
+            text-shadow: 0 1px 2px rgba(0,0,0,0.3);
+        }
+
+        .color-info {
+            padding: 0.8rem;
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* Outfit Grid */
+        .outfit-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .outfit-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            transition: box-shadow 0.3s;
+        }
+
+        .outfit-card:hover {
+            box-shadow: 0 8px 16px rgba(0,0,0,0.12);
+        }
+
+        .outfit-img {
+            width: 100%;
+            height: 200px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .outfit-body {
+            padding: 1rem;
+        }
+
+        .outfit-title {
+            font-size: 1.1rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .outfit-desc {
+            font-size: 0.9rem;
+            color: var(--text-light);
+            margin-bottom: 1rem;
+        }
+
+        .outfit-tags {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .outfit-tag {
+            font-size: 0.75rem;
+            padding: 0.2rem 0.6rem;
+            background-color: #f0f0f0;
+            border-radius: 4px;
+            color: #555;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+        }
+
+        .sidebar-widget {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-title {
+            font-size: 1.2rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 0.8rem;
+        }
+
+        .style-list li {
+            margin-bottom: 0.8rem;
+            border-bottom: 1px dashed #eee;
+            padding-bottom: 0.5rem;
+        }
+
+        .style-list a {
+            display: flex;
+            justify-content: space-between;
+            font-size: 0.95rem;
+        }
+
+        .style-list a:hover {
+            color: var(--accent-color);
+        }
+
+        .style-count {
+            background: #f0f0f0;
+            padding: 0.1rem 0.5rem;
+            border-radius: 10px;
+            font-size: 0.8rem;
+        }
+
+        .guide-item {
+            margin-bottom: 1.2rem;
+        }
+
+        .guide-item h4 {
+            font-size: 1rem;
+            margin-bottom: 0.3rem;
+        }
+
+        .guide-item p {
+            font-size: 0.85rem;
+            color: var(--text-light);
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background-color: #fff;
+            padding: 3rem 1rem;
+            margin-top: 2rem;
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+
+        .faq-question {
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 0.8rem;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-icon {
+            font-size: 0.8rem;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #fff;
+            padding: 3rem 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+        }
+
+        .footer-col h3 {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: #ccc;
+        }
+
+        .footer-col a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 3rem;
+            padding-top: 1rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .container {
+                grid-template-columns: 1fr;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem;
+            }
+
+            nav ul {
+                margin-top: 1rem;
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <div class="logo">Style<span>Guide</span></div>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#styles">风格指南</a></li>
+                <li><a href="#colors">色彩搭配</a></li>
+                <li><a href="#wardrobe">衣橱管理</a></li>
+            </ul>
+        </nav>
+        <button class="search-btn">搜索搭配</button>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>掌握配搭衣服的黄金法则</h1>
+            <p>无论你是职场新人还是时尚达人，正确的穿搭技巧能瞬间提升气质。从色彩心理学到衣橱整理，我们为你提供全方位的实用指南。</p>
+            <div class="hero-tags">
+                <span class="tag">通勤穿搭</span>
+                <span class="tag">休闲风格</span>
+                <span class="tag">色彩理论</span>
+                <span class="tag">身材修饰</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Main Content Area -->
+        <div class="main-content">
+            
+            <!-- Color Theory Section -->
+            <section id="colors">
+                <div class="section-header">
+                    <h2 class="section-title">基础色彩搭配</h2>
+                </div>
+                <p style="margin-bottom: 1.5rem; color: #666;">了解色彩关系是配搭衣服的第一步。以下是基于色彩环的常见搭配方案。</p>
+                <div class="color-grid">
+                    <div class="color-card">
+                        <div class="color-circle" style="background-color: #e74c3c;">同色系</div>
+                        <div class="color-info">同色不同深浅<br>高级感与层次感</div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-circle" style="background-color: #3498db;">邻近色</div>
+                        <div class="color-info">色环相邻颜色<br>和谐自然舒适</div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-circle" style="background-color: #9b59b6;">对比色</div>
+                        <div class="color-info">色环相对颜色<br>活力吸睛醒目</div>
+                    </div>
+                    <div class="color-card">
+                        <div class="color-circle" style="background-color: #2ecc71;">互补色</div>
+                        <div class="color-info">色环相对颜色<br>经典撞色效果</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Outfit Examples Section -->
+            <section id="styles">
+                <div class="section-header">
+                    <h2 class="section-title">热门搭配风格</h2>
+                    <a href="#" style="font-size: 0.9rem; color: var(--accent-color);">查看更多 &rarr;</a>
+                </div>
+                <div class="outfit-grid">
+                    <article class="outfit-card">
+                        <img src="https://picsum.photos/seed/fashion1/400/300" alt="商务通勤穿搭" class="outfit-img">
+                        <div class="outfit-body">
+                            <h3 class="outfit-title">干练商务通勤风</h3>
+                            <p class="outfit-desc">适合职场女性的西装外套搭配，注重剪裁与质感。</p>
+                            <div class="outfit-tags">
+                                <span class="outfit-tag">职场</span>
+                                <span class="outfit-tag">简约</span>
+                                <span class="outfit-tag">修身</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="outfit-card">
+                        <img src="https://picsum.photos/seed/fashion2/400/300" alt="休闲周末穿搭" class="outfit-img">
+                        <div class="outfit-body">
+                            <h3 class="outfit-title">舒适休闲周末风</h3>
+                            <p class="outfit-desc">牛仔裤与T恤的经典组合，轻松自在的日常着装。</p>
+                            <div class="outfit-tags">
+                                <span class="outfit-tag">休闲</span>
+                                <span class="outfit-tag">舒适</span>
+                                <span class="outfit-tag">百搭</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="outfit-card">
+                        <img src="https://picsum.photos/seed/fashion3/400/300" alt="约会优雅穿搭" class="outfit-img">
+                        <div class="outfit-body">
+                            <h3 class="outfit-title">浪漫约会优雅风</h3>
+                            <p class="outfit-desc">柔美的连衣裙与精致配饰，展现女性的温柔魅力。</p>
+                            <div class="outfit-tags">
+                                <span class="outfit-tag">约会</span>
+                                <span class="outfit-tag">优雅</span>
+                                <span class="outfit-tag">淑女</span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="outfit-card">
+                        <img src="https://picsum.photos/seed/fashion4/400/300" alt="复古港风穿搭" class="outfit-img">
+                        <div class="outfit-body">
+                            <h3 class="outfit-title">复古港风穿搭</h3>
+                            <p class="outfit-desc">利用波点、丝绒等元素，打造浓郁的复古氛围。</p>
+                            <div class="outfit-tags">
+                                <span class="outfit-tag">复古</span>
+                                <span class="outfit-tag">个性</span>
+                                <span class="outfit-tag">氛围感</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-widget">
+                <h3 class="sidebar-title">风格分类</h3>
+                <ul class="style-list">
+                    <li><a href="#">极简主义 <span class="style-count">2.3k</span></a></li>
+                    <li><a href="#">街头潮流 <span class="style-count">1.8k</span></a></li>
+                    <li><a href="#">日系森系 <span class="style-count">1.5k</span></a></li>
+                    <li><a href="#">欧美辣妹 <span class="style-count">980</span></a></li>
+                    <li><a href="#">法式慵懒 <span class="style-count">1.2k</span></a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-widget">
+                <h3 class="sidebar-title">新手指南</h3>
+                <div class="guide-item">
+                    <h4>如何根据肤色选色？</h4>
+                    <p>暖色调肤色适合大地色系，冷色调肤色适合蓝、紫、粉等冷色。</p>
+                </div>
+                <div class="guide-item">
+                    <h4>衣橱断舍离技巧</h4>
+                    <p>保留剪裁好、面料佳的基础款，淘汰过时或不再喜欢的单品。</p>
+                </div>
+                <div class="guide-item">
+                    <h4>配饰如何点亮造型？</h4>
+                    <p>一条项链、一个耳环或一条腰带，都能成为整体搭配的点睛之笔。</p>
+                </div>
+            </div>
+        </aside>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container faq-container">
+            <div class="section-header" style="justify-content: center;">
+                <h2 class="section-title" style="border: none; margin: 0;">常见问题解答</h2>
+            </div>
+            
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>新手如何开始学习配搭衣服？</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    建议从建立“基础色系”衣橱开始，如黑白灰、藏蓝、驼色等。多关注色彩搭配的基础理论（如60-30-10原则），并尝试模仿自己喜欢的博主穿搭，逐渐形成自己的风格。
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>小个子女生有哪些穿搭雷区？</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    避免过于宽大的廓形外套、过于拖沓的长裙或过于复杂的图案堆砌。建议选择高腰线单品、短款上衣以及垂直线条的剪裁，这能有效拉长腿部比例。
+                </div>
+            </div>
+
+            <div class="faq-item" onclick="toggleFaq(this)">
+                <div class="faq-question">
+                    <span>如何判断衣服是否适合自己的体型？</span>
+                    <span class="faq-icon">+</span>
+                </div>
+                <div class="faq-answer">
+                    观察服装的版型。O型身材适合A字裙和直筒裤来修饰；X型身材适合紧身针织衫来勾勒曲线；H型身材适合有设计感的上衣来增加层次感。关键是扬长避短。
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h3>StyleGuide</h3>
+            <p style="color: #ccc; font-size: 0.9rem; line-height: 1.8;">
+                专注分享实用的服装搭配知识与技巧，帮助每个人找到最适合自己的穿衣风格。
+            </p>
+        </div>
+        <div class="footer-col">
+            <h3>快速导航</h3>
+            <ul>
+                <li><a href="#">色彩搭配原理</a></li>
+                <li><a href="#">四季穿搭指南</a></li>
+                <li><a href="#">配饰选购指南</a></li>
+                <li><a href="#">品牌推荐</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h3>联系我们</h3>
+            <ul>
+                <li><a href="#">投稿合作</a></li>
+                <li><a href="#">意见反馈</a></li>
+                <li><a href="#">商务合作</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2023 配搭衣服指南网. All Rights Reserved.
+    </div>
+</footer>
+
+<script>
+    function toggleFaq(element) {
+        element.classList.toggle('active');
+    }
+
+    // 简单的搜索交互
+    document.querySelector('.search-btn').addEventListener('click', function() {
+        const query = prompt('请输入你想了解的搭配风格或单品：');
+        if (query) {
+            alert('正在为您搜索关于 "' + query + '" 的搭配方案...');
+        }
+    });
+</script>
+
+</body>
+  </html>
