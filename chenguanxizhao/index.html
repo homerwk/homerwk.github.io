@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="陈冠希照片事件回顾专题页，详细记录2008年香港艺人隐私泄露事件的始末、影响及后续法律结果，提供客观的历史资料与行业反思。">
+    <meta name="keywords" content="陈冠希照片事件回顾,香港艺人隐私泄露,陈冠希,Edison Chen,2008年事件">
+    <title>陈冠希照片事件回顾-香港艺人隐私泄露始末与行业反思</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-color: #f8f9fa;
+            --text-main: #2c3e50;
+            --text-secondary: #596b7c;
+            --accent-color: #c0392b;
+            --accent-hover: #a93226;
+            --card-bg: #ffffff;
+            --border-color: #e0e0e0;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #2c3e50 0%, #4ca1af 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            font-size: 0.9rem;
+            color: rgba(255,255,255,0.8);
+        }
+
+        /* Timeline Section */
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin: 60px 0 40px;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 4px;
+            background-color: var(--accent-color);
+            margin: 15px auto 0;
+            border-radius: 2px;
+        }
+
+        .timeline {
+            position: relative;
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 2px;
+            height: 100%;
+            background-color: var(--border-color);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: flex-end;
+            padding-right: 50%;
+            position: relative;
+            margin-bottom: 40px;
+        }
+
+        .timeline-item:nth-child(even) {
+            justify-content: flex-start;
+            padding-right: 0;
+            padding-left: 50%;
+        }
+
+        .timeline-dot {
+            position: absolute;
+            right: -10px;
+            top: 0;
+            width: 20px;
+            height: 20px;
+            background-color: var(--accent-color);
+            border-radius: 50%;
+            border: 4px solid white;
+            box-shadow: 0 0 0 2px var(--border-color);
+        }
+
+        .timeline-item:nth-child(even) .timeline-dot {
+            right: auto;
+            left: -10px;
+        }
+
+        .timeline-content {
+            background-color: var(--card-bg);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            width: 85%;
+            position: relative;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .article-card {
+            background-color: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            margin-bottom: 30px;
+        }
+
+        .article-img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .article-body {
+            padding: 25px;
+        }
+
+        .article-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .article-excerpt {
+            color: var(--text-secondary);
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: var(--accent-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more:hover {
+            text-decoration: underline;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-widget {
+            background-color: var(--card-bg);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .widget-title {
+            font-size: 1.2rem;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 10px;
+        }
+
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .tag {
+            background-color: #f1f3f5;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        .tag:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+        /* Legal & Disclaimer */
+        .disclaimer-box {
+            background-color: #fff3cd;
+            color: #856404;
+            padding: 20px;
+            border-radius: 8px;
+            border: 1px solid #ffeeba;
+            margin-bottom: 40px;
+            font-size: 0.9rem;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #343a40;
+            color: #adb5bd;
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #495057;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .timeline::before {
+                left: 20px;
+            }
+
+            .timeline-item, .timeline-item:nth-child(even) {
+                flex-direction: column;
+                padding-left: 50px;
+                padding-right: 0;
+            }
+
+            .timeline-dot, .timeline-item:nth-child(even) .timeline-dot {
+                left: 10px;
+                right: auto;
+            }
+
+            .timeline-content {
+                width: 100%;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">历史<span>档案</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">事件回顾</a></li>
+                    <li><a href="#">人物背景</a></li>
+                    <li><a href="#">行业影响</a></li>
+                    <li><a href="#">法律反思</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <h1>陈冠希照片事件回顾</h1>
+                <p>2008年香港艺人隐私泄露事件始末，从事件爆发到各方回应，以及随后对演艺行业造成的深远影响。</p>
+                <div class="hero-meta">
+                    <span>发生时间：2008年</span>
+                    <span>关键词：隐私泄露</span>
+                    <span>影响范围：香港演艺圈</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-title">事件时间线</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2008年1月26日</span>
+                        <h3>照片流出</h3>
+                        <p>多张涉及香港多位知名艺人的私密照片在互联网上广泛传播，事件迅速发酵，成为当时轰动全城的新闻。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2008年1月27日</span>
+                        <h3>陈冠希发表声明</h3>
+                        <p>陈冠希召开记者会，向公众道歉，并宣布将退出香港演艺事业，同时表示愿意承担法律责任。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2008年1月28日</span>
+                        <h3>多位艺人表态</h3>
+                        <p>涉及照片的其他艺人纷纷通过经纪公司发表声明，表达震惊、愤怒以及要求警方彻查的态度。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2008年2月</span>
+                        <h3>警方介入调查</h3>
+                        <p>香港警方正式立案调查，对陈冠希及相关人员进行问询，事件进入司法程序。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2010年</span>
+                        <h3>法律判决</h3>
+                        <p>陈冠希因违反《盗用注册商标条例》等罪名在香港西九龙裁判法院被判入狱，随后被驱逐出境。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="content-grid">
+                <div class="main-content">
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/edison1/800/400.jpg" alt="陈冠希声明记者会现场" class="article-img">
+                        <div class="article-body">
+                            <h2 class="article-title">事件始末与各方回应</h2>
+                            <p class="article-excerpt">2008年1月，一系列涉及香港演艺圈知名人士的私密照片在网络上流传。陈冠希随后召开记者会，公开道歉并宣布退出娱乐圈。此事件不仅对当事艺人的个人声誉造成巨大打击，也引发了关于隐私保护、网络道德以及艺人经纪管理的广泛讨论。</p>
+                            <p>事件发生后，香港警方迅速介入调查。陈冠希在承认照片真实性后，表示愿意承担所有责任。除了陈冠希本人，多位受影响的艺人也通过经纪公司发表声明，呼吁停止传播，并要求法律严惩肇事者。</p>
+                            <a href="#" class="read-more">阅读详细报道 &rarr;</a>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/edison2/800/400.jpg" alt="演艺行业反思" class="article-img">
+                        <div class="article-body">
+                            <h2 class="article-title">对演艺行业的深远影响</h2>
+                            <p class="article-excerpt">此次事件被视为香港演艺圈历史上的重大转折点之一。它促使行业内部开始重新审视艺人隐私保护的措施，包括加强私人行程管理、提升网络素养以及建立更完善的危机公关机制。</p>
+                            <p>此外，事件也引发了公众对于数字时代个人隐私边界的思考。如何在追求娱乐新闻的同时尊重个人隐私，成为了媒体和公众需要共同面对的问题。</p>
+                            <a href="#" class="read-more">阅读行业分析 &rarr;</a>
+                        </div>
+                    </article>
+                </div>
+
+                <aside>
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">相关标签</h3>
+                        <div class="tag-cloud">
+                            <a href="#" class="tag">陈冠希</a>
+                            <a href="#" class="tag">Edison Chen</a>
+                            <a href="#" class="tag">隐私保护</a>
+                            <a href="#" class="tag">香港娱乐圈</a>
+                            <a href="#" class="tag">2008年事件</a>
+                            <a href="#" class="tag">网络伦理</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h3 class="widget-title">延伸阅读</h3>
+                        <ul style="line-height: 2;">
+                            <li><a href="#">数字时代的隐私权界定</a></li>
+                            <li><a href="#">艺人经纪危机公关指南</a></li>
+                            <li><a href="#">互联网传播的法律责任</a></li>
+                            <li><a href="#">香港娱乐产业转型之路</a></li>
+                        </ul>
+                    </div>
+                </aside>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="disclaimer-box">
+                <strong>免责声明：</strong> 本页面旨在整理历史资料，回顾事件经过，不传播任何未经证实的信息或违规内容。对于历史事件，我们主张客观中立的态度，仅供研究参考。
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于本站</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">致力于提供客观、准确的历史资料整理与行业分析，帮助用户深入了解重大社会事件的背景与影响。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>相关主题</h4>
+                    <ul>
+                        <li><a href="#">隐私保护技术</a></li>
+                        <li><a href="#">网络安全法规</a></li>
+                        <li><a href="#">娱乐圈观察</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">隐私政策</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 历史档案网. 保留所有权利.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
