@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="罗技官网驱动下载中心提供最新的鼠标、键盘、耳机及摄像头驱动程序。支持Logitech G、MX、Cobra等系列，确保设备最佳性能与兼容性。">
+    <meta name="keywords" content="罗技官网驱动下载, Logitech驱动, 罗技鼠标驱动, 罗技G系列驱动, 罗技官网">
+    <title>罗技官网驱动下载-官方驱动程序与软件中心</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a1a1a;
+            --accent-color: #00a4ef;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --border-color: #e1e4e8;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+        }
+
+        .nav-container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            height: 64px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 24px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            font-size: 15px;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .search-btn {
+            background: none;
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 6px 16px;
+            cursor: pointer;
+            font-size: 14px;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .search-btn:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0066cc 0%, #00a4ef 100%);
+            color: white;
+            padding: 60px 0;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .hero h1 {
+            font-size: 32px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 32px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Search Bar */
+        .search-wrapper {
+            max-width: 500px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 20px;
+            padding-right: 50px;
+            border-radius: 30px;
+            border: none;
+            font-size: 16px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            outline: none;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #999;
+            pointer-events: none;
+        }
+
+        /* Main Layout */
+        .main-container {
+            max-width: var(--container-width);
+            margin: 40px auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+            flex: 1;
+        }
+
+        /* Section Styles */
+        section {
+            margin-bottom: 40px;
+        }
+
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 20px;
+            border-left: 4px solid var(--accent-color);
+            padding-left: 12px;
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .section-link {
+            font-size: 14px;
+            color: var(--accent-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .section-link:hover {
+            text-decoration: underline;
+        }
+
+        /* Product Cards Grid */
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .product-card {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, box-shadow 0.2s;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+            border-color: var(--accent-color);
+        }
+
+        .product-icon {
+            width: 48px;
+            height: 48px;
+            margin-bottom: 12px;
+            fill: var(--text-main);
+        }
+
+        .product-name {
+            font-weight: 600;
+            font-size: 16px;
+            margin-bottom: 4px;
+            color: var(--text-main);
+        }
+
+        .product-sub {
+            font-size: 13px;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .btn-download {
+            background-color: var(--accent-color);
+            color: white;
+            border: none;
+            padding: 8px 16px;
+            border-radius: 4px;
+            font-size: 13px;
+            font-weight: 500;
+            width: 100%;
+            transition: background-color 0.2s;
+        }
+
+        .btn-download:hover {
+            background-color: #008bc2;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .info-box {
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .info-title {
+            font-size: 15px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            margin-bottom: 10px;
+            font-size: 14px;
+            color: var(--text-secondary);
+            padding-left: 14px;
+            position: relative;
+        }
+
+        .info-list li::before {
+            content: "•";
+            color: var(--accent-color);
+            position: absolute;
+            left: 0;
+            font-weight: bold;
+        }
+
+        .guide-link {
+            display: block;
+            margin-top: 12px;
+            font-size: 13px;
+            color: var(--text-main);
+            text-decoration: none;
+            border-bottom: 1px dashed var(--border-color);
+            padding-bottom: 4px;
+        }
+
+        .guide-link:hover {
+            color: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        /* Latest Updates List */
+        .update-list {
+            list-style: none;
+        }
+
+        .update-item {
+            padding: 16px 0;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .update-item:last-child {
+            border-bottom: none;
+        }
+
+        .update-date {
+            font-size: 12px;
+            color: var(--text-secondary);
+            margin-bottom: 4px;
+        }
+
+        .update-title {
+            font-size: 15px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #f1f1f1;
+            border-top: 1px solid var(--border-color);
+            padding: 40px 0;
+            margin-top: auto;
+        }
+
+        .footer-content {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .footer-col h4 {
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 16px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            font-size: 13px;
+            color: var(--text-secondary);
+            text-decoration: none;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #e1e4e8;
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-container {
+                grid-template-columns: 1fr;
+            }
+
+            .nav-container {
+                flex-wrap: wrap;
+                height: auto;
+                padding: 12px;
+            }
+
+            nav ul {
+                display: none; /* Simplified for mobile */
+            }
+
+            .hero {
+                padding: 40px 0;
+            }
+
+            .hero h1 {
+                font-size: 24px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="nav-container">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+            </svg>
+            Logitech<span>驱动中心</span>
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">全部产品</a></li>
+                <li><a href="#">游戏装备</a></li>
+                <li><a href="#">人体工学</a></li>
+                <li><a href="#">视频会议</a></li>
+                <li><a href="#">支持与下载</a></li>
+            </ul>
+        </nav>
+        <button class="search-btn">搜索驱动</button>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>为您的设备获取最新驱动</h1>
+            <p>访问官方驱动下载中心，获取适用于鼠标、键盘、耳机及摄像头的最新软件与固件，确保最佳性能与兼容性。</p>
+            <div class="search-wrapper">
+                <input type="text" class="search-input" placeholder="输入产品型号（例如：MX Master 3S）">
+                <span class="search-icon">🔍</span>
+            </div>
+        </div>
+    </section>
+
+    <div class="main-container">
+        <!-- Left Content -->
+        <div class="content-area">
+            
+            <!-- Popular Categories -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">热门驱动分类</h2>
+                    <a href="#" class="section-link">查看全部分类 &rarr;</a>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <svg class="product-icon" viewBox="0 0 24 24"><path d="M13 1.07V9h7c0-4.08-3.05-7.44-7-7.93zM4 15c0 4.42 3.58 8 8 8v-7H4z"/></svg>
+                        <h3 class="product-name">无线鼠标</h3>
+                        <p class="product-sub">MX, G Pro, Cobra</p>
+                        <button class="btn-download">下载驱动</button>
+                    </article>
+                    <article class="product-card">
+                        <svg class="product-icon" viewBox="0 0 24 24"><path d="M20 5H4c-1.1 0-1.99.9-1.99 2L2 17c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm-9 3h2v2h-2V8zm0 3h2v2h-2v-2zM8 8h2v2H8V8zm0 3h2v2H8v-2zm-1 2H5v-2h2v2zm0-3H5V8h2v2zm9 7H8v-2h8v2zm0-4h-2v-2h2v2zm0-3h-2V8h2v2zm3 3h-2v-2h2v2zm0-3h-2V8h2v2z"/></svg>
+                        <h3 class="product-name">机械键盘</h3>
+                        <p class="product-sub">G Series, C930</p>
+                        <button class="btn-download">下载驱动</button>
+                    </article>
+                    <article class="product-card">
+                        <svg class="product-icon" viewBox="0 0 24 24"><path d="M12 3v9.28c-.47-.17-.97-.28-1.5-.28C8.01 12 6 14.01 6 16.5S8.01 21 10.5 21c2.31 0 4.2-1.75 4.45-4H15V6h4V3h-7z"/></svg>
+                        <h3 class="product-name">游戏耳机</h3>
+                        <p class="product-sub">G Pro X, G435</p>
+                        <button class="btn-download">下载驱动</button>
+                    </article>
+                    <article class="product-card">
+                        <svg class="product-icon" viewBox="0 0 24 24"><path d="M17 10.5V7c0-.55-.45-1-1-1H4c-.55 0-1 .45-1 1v10c0 .55.45 1 1 1h12c.55 0 1-.45 1-1v-3.5l4 4v-11l-4 4z"/></svg>
+                        <h3 class="product-name">网络摄像头</h3>
+                        <p class="product-sub">C920, Brio, MeetUp</p>
+                        <button class="btn-download">下载驱动</button>
+                    </article>
+                </div>
+            </section>
+
+            <!-- Featured Downloads -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">最新驱动程序</h2>
+                    <a href="#" class="section-link">所有更新 &rarr;</a>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <svg class="product-icon" viewBox="0 0 24 24"><path d="M20 6h-8l-2-2H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V8c0-1.1-.9-2-2-2zm0 12H4V8h16v10z"/></svg>
+                        <h3 class="product-name">Logitech Options+</h3>
+                        <p class="product-sub">通用配置工具</p>
+                        <button class="btn-download">下载 v10.60</button>
+                    </article>
+                    <article class="product-card">
+                        <svg class="product-icon" viewBox="0 0 24 24"><path d="M21 3H3c-1.11 0-2 .89-2 2v14c0 1.1.89 2 2 2h18c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-10 9H8v3H6v-3H3v-2h3V7h2v3h3v2zm4.5 2c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5zm4 0c-.83 0-1.5-.67-1.5-1.5s.67-1.5 1.5-1.5 1.5.67 1.5 1.5-.67 1.5-1.5 1.5z"/></svg>
+                        <h3 class="product-name">Logitech G Hub</h3>
+                        <p class="product-sub">游戏设备中心</p>
+                        <button class="btn-download">下载 v40.50</button>
+                    </article>
+                    <article class="product-card">
+                        <svg class="product-icon" viewBox="0 0 24 24"><path d="M18 4l2 4h-3l-2-4h-2l2 4h-3l-2-4H8l2 4H7L5 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4h-4z"/></svg>
+                        <h3 class="product-name">Logitech Audio</h3>
+                        <p class="product-sub">高清音频驱动</p>
+                        <button class="btn-download">下载 v2.1</button>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="info-box">
+                <h4 class="info-title">⚙️ 驱动安装指南</h4>
+                <ul class="info-list">
+                    <li>确保网络连接稳定</li>
+                    <li>关闭杀毒软件临时拦截</li>
+                    <li>选择与系统匹配的版本</li>
+                    <li>重启设备完成配置</li>
+                </ul>
+                <a href="#" class="guide-link">阅读详细安装步骤</a>
+            </div>
+
+            <div class="info-box">
+                <h4 class="info-title">📅 近期更新</h4>
+                <ul class="update-list">
+                    <li class="update-item">
+                        <div class="update-date">2023-10-25</div>
+                        <div class="update-title">MX Master 3S 固件 v1.1.3</div>
+                    </li>
+                    <li class="update-item">
+                        <div class="update-date">2023-10-18</div>
+                        <div class="update-title">G Pro X Superlight 驱动更新</div>
+                    </li>
+                    <li class="update-item">
+                        <div class="update-date">2023-10-10</div>
+                        <div class="update-title">C920s Pro HD 驱动补丁</div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="info-box" style="background-color: #e3f2fd; border-color: #bbdefb;">
+                <h4 class="info-title" style="color: #0d47a1;">💡 智能推荐</h4>
+                <p style="font-size: 13px; color: #333; margin-bottom: 10px;">不知道您的设备型号？使用左侧搜索框或输入序列号查找。</p>
+                <button class="btn-download" style="background-color: #0d47a1;">查找我的设备</button>
+            </div>
+        </aside>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-content">
+        <div class="footer-col">
+            <h4>产品支持</h4>
+            <ul>
+                <li><a href="#">驱动下载</a></li>
+                <li><a href="#">产品查询</a></li>
+                <li><a href="#">保修查询</a></li>
+                <li><a href="#">故障排除</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>账户与设置</h4>
+            <ul>
+                <li><a href="#">Logi ID 登录</a></li>
+                <li><a href="#">设备管理</a></li>
+                <li><a href="#">软件更新</a></li>
+                <li><a href="#">隐私政策</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>联系我们</h4>
+            <ul>
+                <li><a href="#">帮助中心</a></li>
+                <li><a href="#">联系客服</a></li>
+                <li><a href="#">社区论坛</a></li>
+                <li><a href="#">技术支持</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>关于我们</h4>
+            <ul>
+                <li><a href="#">公司简介</a></li>
+                <li><a href="#">投资者关系</a></li>
+                <li><a href="#">可持续发展</a></li>
+                <li><a href="#">加入我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>&copy; 2024 Logitech. 保留所有权利。本页面为模拟演示，非官方罗技网站。</p>
+    </div>
+</footer>
+
+</body>
+  </html>
